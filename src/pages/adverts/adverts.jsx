@@ -6,7 +6,7 @@ import {useEffect, useState} from "react";
 import {AdvertCard} from "src/components/advertCard";
 import {CardsContainer} from "src/shared/ui/cardsContainer";
 
-import {Data} from "./data";
+import {Data} from "src/assets/mock/data.js";
 
 
 
