@@ -125,8 +125,8 @@ const adverts = [
             img1,
             img1
         ],
-        target_amount: 150_000,
-        progress_amount: 83_842,
+        target_amount: 200_000,
+        progress_amount: 175_842,
         charity_qty: 143,
         creation_date: "12.05.2022",
         end_date: "12.12.2022",
@@ -179,7 +179,7 @@ const adverts = [
             img1,
             img1
         ],
-        target_amount: 150_000,
+        target_amount: 250_000,
         progress_amount: 83_842,
         charity_qty: 143,
         creation_date: "12.05.2022",
@@ -207,7 +207,7 @@ const adverts = [
             img1
         ],
         target_amount: 150_000,
-        progress_amount: 83_842,
+        progress_amount: 3_842,
         charity_qty: 143,
         creation_date: "12.05.2022",
         end_date: "12.12.2022",

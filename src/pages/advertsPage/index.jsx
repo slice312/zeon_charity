@@ -2,17 +2,14 @@ import css from "./styles.module.scss";
 import cn from "classnames"
 
 import {useTranslation} from "react-i18next";
-import {useEffect, useState} from "react";
 import {AdvertCard} from "src/components/advertCard";
 import {CardsContainer} from "src/shared/ui/cardsContainer";
 
-import {Data} from "./data";
+import {Data} from "src/assets/mock/data.js";
 
 
 
-export const Adverts = () => {
-    const {t} = useTranslation();
-
+export const AdvertsPage = () => {
     return (
         <div className={cn("container", css.root)}>
             <CardsContainer>

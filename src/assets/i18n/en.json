@@ -1,4 +1,8 @@
 {
-    "doHelp": "help",
-    "from": "from"
+  "doHelp": "help",
+  "from": "from",
+  "statistics": "Statistics",
+  "contacts": "Contacts",
+  "fund": "Fund",
+  "donate": "Donate"
 }
