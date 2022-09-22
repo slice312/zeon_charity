@@ -1,0 +1,62 @@
+@import "../../shared/styles/vars";
+
+.second-template {
+  padding-top: 120px;
+
+  &__title {
+    text-align: center;
+    color: #090909;
+    font-size: 42px;
+    line-height: 1.381em;
+    font-weight: 700;
+  }
+
+  &__subtitle {
+    color: $btn-color2;
+    font-size: 20px;
+    line-height: 1.1em;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  &__section {
+    background-color: #fef9f2;
+    padding-bottom: 200px;
+    padding-top: 200px;
+  }
+
+  &__text {
+    color: #6e6e6e;
+    font-size: 18px;
+    line-height: 1.667em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .second-template {
+
+    &__section {
+      background-color: #fef9f2;
+      padding-bottom: 150px;
+      padding-top: 150px;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .second-template {
+   &__section {
+     padding-bottom: 100px;
+     padding-top: 100px;
+   }
+
+    &__title {
+      font-size: 36px;
+    }
+  }
+}
+
+
+
+
