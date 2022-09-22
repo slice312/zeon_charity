@@ -1,8 +1,5 @@
-@import "@/shared/styles/vars";
-@import "@/shared/styles/mixins";
+@import "src/shared/styles/vars";
 
-
-/* stylelint-disable selector-class-pattern */
 
 .container {
     max-width: 1432px;
@@ -38,5 +35,3 @@
         padding: 0 20px;
     }
 }
-
-/* stylelint-enable selector-class-pattern */
