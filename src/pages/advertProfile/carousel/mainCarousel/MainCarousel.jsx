@@ -24,19 +24,18 @@ const MainCarousel = ({slides, activeIndex, setActiveIndex}) => {
                 <NextButton setActiveIndex={setActiveIndex}
                             activeIndex={activeIndex}
                             modalOpened={modalOpened}/>}
-            {!modalOpened &&
-                <OpenModalButton openModal={() => setModalOpened(true)}/>}
             {modalOpened &&
                 <CloseModalButton closeModal={() => setModalOpened(false)}/>}
             <Swiper
                 spaceBetween={modalOpened? 0 : 8}
-                slidesPerView={modalOpened || slides.length === 1 ? 1 : 1.2}
+                slidesPerView={1}
                 keyboard
                 onSlideChange={swiper => setActiveIndex(swiper.activeIndex)}
             >
                 {slides.map((slide, index) =>
                     <SwiperSlide key={index}>
                         <MainCarouselItem slide={slide}
+                                          setOpened={setModalOpened}
                                           setActiveIndex={setActiveIndex}
                                           activeIndex={activeIndex}/>
                     </SwiperSlide>

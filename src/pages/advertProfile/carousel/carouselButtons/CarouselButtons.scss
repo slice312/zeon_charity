@@ -1,18 +1,42 @@
 .carouselButton{
   position: absolute;
   z-index: 2;
-  background-color: white;
+  //background-color: white;
   opacity: .8;
   transition: .5s;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 32px;
-  height: 32px;
+  //width: 32px;
+  //height: 32px;
+  &.prev, &.next{
+    opacity: 0;
+    height: 100%;
+    svg{
+      width: 40px;
+      height: 40px;
+    }
+    &:hover{
+      opacity: 1;
+    }
+  }
+  &.prev{
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &.next{
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
   &.modalOpened{
     width: 64px;
     height: 64px;
     background-color: rgba(0,0, 0, 0);
+    &.prev, &.next {
+      opacity: .8;
+    }
     svg{
       width: 40px;
       height: 40px;
@@ -26,19 +50,6 @@
   }
   &:hover{
     opacity: 1;
-    width: 48px;
-  }
-  &.prev{
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    border-radius: 0 4px 4px 0;
-  }
-  &.next{
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    border-radius: 4px 0 0 4px;
   }
   &.openModal{
     top: 0;
@@ -54,11 +65,8 @@
     border-radius: 0 0 0 4px;
     background-color: rgba(0,0, 0, 0);
     svg{
-      width: 40px;
-      height: 40px;
-    }
-    &:hover{
-      width: 32px;
+      width: 30px;
+      height: 30px;
     }
   }
 }
