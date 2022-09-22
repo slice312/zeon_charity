@@ -1,0 +1,28 @@
+@import "src/shared/styles/vars";
+
+
+.root {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    justify-content: center;
+}
+
+
+@media (max-width: $lg) {
+    .root {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: $md) {
+    .root {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 443px) {
+    .root {
+        grid-template-columns: repeat(1, 90%);
+    }
+}

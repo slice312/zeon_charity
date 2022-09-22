@@ -1,0 +1,36 @@
+.secondaryCarousel{
+  padding: 8px 0;
+  max-width: 359px;
+
+  .item{
+    img {
+      width: 88px;
+      aspect-ratio: 1;
+      object-fit: cover;
+      background-color: rgb(175, 138, 138);
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .secondaryCarousel{
+    max-width: 260px;
+    .item{
+      img {
+        width: 60px;
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .secondaryCarousel{
+    max-width: 200px;
+    .item{
+      img {
+        width: 45px;
+      }
+    }
+  }
+}

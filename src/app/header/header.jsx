@@ -1,11 +1,21 @@
 import "./header.scss"
 import logoIcon from "../../assets/icons/logo.svg"
-import {Link} from "react-router-dom";
-import Sidebar from "./components/sidebar/sidebar";
-import {useState} from "react";
+import {Link} from "react-router-dom"
+import Sidebar from "./components/sidebar/sidebar"
+import {useEffect, useState} from "react"
+import i18n from "../../i18n"
+import {useTranslation} from "react-i18next"
 
 const Header = () => {
+  const {t} = useTranslation()
   const [isSidebarOpened, setIsSidebarOpened] = useState(false)
+  const [locale, setLocale] = useState(i18n.language)
+
+  useEffect(() => {
+    i18n.changeLanguage(locale)
+      .then(() => console.log(`Localization changed to ${locale}`))
+  }, [locale])
+
 
   const toggleSidebar = () => {
     setIsSidebarOpened(prev => !prev)
@@ -41,15 +51,17 @@ const Header = () => {
             <button type={"button"} className="header__buttons-item header__buttons-item--give-help">
               Пожертвовать
             </button>
-            <button type={"button"} className="header__buttons-item header__buttons-item--language">
-              RU
+            <button type={"button"} className="header__buttons-item header__buttons-item--language" onClick={() => {
+              setLocale(locale === "EN" ? "RU" : "EN")
+            }} >
+              {t}
             </button>
           </div>
         <Sidebar isSidebarOpened={isSidebarOpened} toggleSidebar={toggleSidebar}/>
         </div>
       </div>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

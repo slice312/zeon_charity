@@ -1,0 +1,58 @@
+
+.mainCarousel{
+  position: relative;
+  &.opened{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 100;
+    .item{
+      display: flex;
+      margin: auto;
+      height: 100vh;
+      max-height: 100vh;
+      .item__content{
+        aspect-ratio: auto;
+
+        img{
+          display: block;
+          margin: auto;
+          max-height: calc(100vh);
+          max-width: calc(100vw - 200px);
+          object-fit: contain;
+        }
+      }
+    }
+  }
+  .item{
+    .item__content {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      //aspect-ratio: 520/339;
+      img{
+        width: 100%;
+        aspect-ratio: 520/300;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .mainCarousel{
+    &.opened{
+      .item{
+        .item__content{
+          img{
+            max-width: 100vw;
+            max-height: calc(100vh - 80px);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,7 +1,26 @@
-
-
-.root {
-    width: 200px;
-    height: 200px;
-    background-color: red;
+@import  "src/shared/styles/vars";
+.carousel__container{
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+@media ($xl) {
+  .carousel__container{
+    max-width: 1140px;
+  }
+}
+@media ($lg) {
+  .carousel__container{
+    max-width: 950px;
+  }
+}
+@media ($md) {
+  .carousel__container{
+    max-width: 720px;
+  }
+}
+@media ($sm) {
+  .carousel__container{
+    max-width: 520px;
+  }
 }
