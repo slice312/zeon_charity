@@ -2,6 +2,9 @@ import React, {useState} from 'react';
 import './advertProfile.scss'
 import MainCarousel from "./carousel/mainCarousel/MainCarousel.jsx";
 import SecondaryCarousel from "./carousel/secondaryCarousel/SecondaryCarousel.jsx";
+import Charts from "./charts/Charts.jsx";
+import Fade from "../../components/fade/Fade.jsx"
+import Timer from "./timer/Timer.jsx";
 
 
 
@@ -20,17 +23,51 @@ const AdvertProfile = () => {
     ]
     const [activeIndex, setActiveIndex] = useState(0)
 
+    const [need, done] = [400, 600]
+
     return (
         <div className={'advertProfile'}>
             <div className={'container'}>
                 <div className={'banner'}>
-                    <h2>
-                        LIVE BID! 2 Lower Level Tickets to Adele in Vegas & 2 Nights at the ARIA Resort & Casino
-                    </h2>
-                    <div className={'advert-carousel'}>
-                        <MainCarousel slides={slides} activeIndex={activeIndex} setActiveIndex={setActiveIndex}/>
-                        <SecondaryCarousel slides={slides} activeIndex={activeIndex} setActiveIndex={setActiveIndex}/>
+                    <div className={'banner-info'}>
+                        <h2>
+                            LIVE BID! 2 Lower Level Tickets to Adele in Vegas & 2 Nights at the ARIA Resort & Casino
+                        </h2>
+                        <div className={'advert-carousel'}>
+                            <div className={'carousel-wrapper main'}>
+                                <MainCarousel slides={slides} activeIndex={activeIndex} setActiveIndex={setActiveIndex}/>
+                            </div>
+                            <div className={'carousel-wrapper secondary'}>
+                                <SecondaryCarousel slides={slides} activeIndex={activeIndex} setActiveIndex={setActiveIndex}/>
+                            </div>
+                        </div>
                     </div>
+                    <Fade>
+                        <div className={'banner-charts'}>
+                            <Charts need={need} done={done}/>
+                            <div className={'charts-description'}>
+                                <h3 className={'charts-description__title'}>
+                                    Необходимо собрать:
+                                </h3>
+                                <p className={'charts-description__content'}>
+                                    {need+done}$
+                                </p>
+                                <h3 className={'charts-description__title'}>
+                                    Уже собрано:
+                                </h3>
+                                <p className={'charts-description__content'}>
+                                    {done}$
+                                </p>
+                                <h3 className={'charts-description__title'}>
+                                    Осталось собрать:
+                                </h3>
+                                <p className={'charts-description__content'}>
+                                    {need}$
+                                </p>
+                            </div>
+                        </div>
+                    </Fade>
+                    <Timer/>
                 </div>
             </div>
         </div>
