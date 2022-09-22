@@ -1,5 +1,9 @@
 @import "src/shared/styles/vars";
+@import "src/shared/styles/mixins";
 
+.App{
+    font-family: "Inter", sans-serif;
+}
 
 .container {
     max-width: 1432px;

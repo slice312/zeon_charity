@@ -10,15 +10,23 @@ import {useSwiper} from "swiper/react";
 //     }
 // }
 
-const MainCarouselItem = ({slide, activeIndex}) => {
+const MainCarouselItem = ({slide, activeIndex, setOpened}) => {
     const swiper = useSwiper()
     useEffect(() => {
         swiper.slideTo(activeIndex, 400)
     }, [activeIndex])
     return (
         <div className="item">
-            <div className="item__content">
-                <img src={slide.image} alt={'eda'}/>
+            <div className="item__content"
+                 onClick={() => {
+                     setOpened(false)
+                 }}>
+                <img src={slide.image}
+                     alt={'eda'}
+                     onClick={(e) => {
+                         e.stopPropagation()
+                         setOpened(true)
+                     }}/>
             </div>
         </div>
     );
