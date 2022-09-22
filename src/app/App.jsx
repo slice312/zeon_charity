@@ -1,17 +1,13 @@
-import {useState} from 'react';
+import {Router} from "./Router.jsx"
 import "./styles/index.scss";
 
 
-import {Router} from "./Router.jsx"
-
-function App() {
-    const [count, setCount] = useState(0);
+export const App = () => {
 
     return (
         <div className="App">
             <Router/>
         </div>
     );
-}
+};
 
-export default App;
