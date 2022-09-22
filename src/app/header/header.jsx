@@ -3,11 +3,10 @@ import logoIcon from "../../assets/icons/logo.svg"
 import {Link} from "react-router-dom"
 import Sidebar from "./components/sidebar/sidebar"
 import {useEffect, useState} from "react"
-import i18n from "../../i18n"
 import {useTranslation} from "react-i18next"
 
 const Header = () => {
-  const {t} = useTranslation()
+  const {t, i18n} = useTranslation()
   const [isSidebarOpened, setIsSidebarOpened] = useState(false)
   const [locale, setLocale] = useState(i18n.language)
 
@@ -15,7 +14,6 @@ const Header = () => {
     i18n.changeLanguage(locale)
       .then(() => console.log(`Localization changed to ${locale}`))
   }, [locale])
-
 
   const toggleSidebar = () => {
     setIsSidebarOpened(prev => !prev)
@@ -33,13 +31,13 @@ const Header = () => {
           <nav className="header__nav">
             <ul className="header__menu-list">
               <li className="header__menu-item">
-                <Link to={'/fund'}>Фонд</Link>
+                <Link to={'/fund'}>{t('fund')}</Link>
               </li>
               <li className="header__menu-item">
-                <Link to={'/statistics'}>Статистка</Link>
+                <Link to={'/statistics'}>{t('statistics')}</Link>
               </li>
               <li className="header__menu-item">
-                <Link to={'/contacts'}>Контакты</Link>
+                <Link to={'/contacts'}>{t("contacts")}</Link>
               </li>
             </ul>
           </nav>
@@ -49,15 +47,17 @@ const Header = () => {
               <div className="header__burger-item"/>
             </button>
             <button type={"button"} className="header__buttons-item header__buttons-item--give-help">
-              Пожертвовать
+              {
+                t('donate')
+              }
             </button>
             <button type={"button"} className="header__buttons-item header__buttons-item--language" onClick={() => {
               setLocale(locale === "EN" ? "RU" : "EN")
-            }} >
-              {t}
+            }}>
+              {locale}
             </button>
           </div>
-        <Sidebar isSidebarOpened={isSidebarOpened} toggleSidebar={toggleSidebar}/>
+          <Sidebar isSidebarOpened={isSidebarOpened} toggleSidebar={toggleSidebar}/>
         </div>
       </div>
     </header>

@@ -2,8 +2,10 @@ import {Link} from "react-router-dom";
 import './sidebar.scss'
 import logoIcon from "../../../../assets/icons/logo.svg";
 import closeIcon from "../../../../assets/icons/close.svg";
+import {useTranslation} from "react-i18next";
 
 const Sidebar = ({isSidebarOpened, toggleSidebar}) => {
+  const {t} = useTranslation()
 
   return (
     <div className={'sidebar' + (isSidebarOpened ? ' sidebar-js--open' : '')}>
@@ -19,18 +21,20 @@ const Sidebar = ({isSidebarOpened, toggleSidebar}) => {
         <nav className="sidebar__nav">
           <ul className="sidebar__menu-list">
             <li className="header__menu-item">
-              <Link to={'/fund'}>Фонд</Link>
+              <Link to={'/fund'}>{t('fund')}</Link>
             </li>
             <li className="header__menu-item">
-              <Link to={'/statistics'}>Статистка</Link>
+              <Link to={'/statistics'}>{t('statistics')}</Link>
             </li>
             <li className="header__menu-item">
-              <Link to={'/contacts'}>Контакты</Link>
+              <Link to={'/contacts'}>{t("contacts")}</Link>
             </li>
           </ul>
         </nav>
         <button type={"button"} className="header__buttons-item header__buttons-item--give-help sidebar__btn">
-          Пожертвовать
+          {
+            t('donate')
+          }
         </button>
       </div>
     </div>
