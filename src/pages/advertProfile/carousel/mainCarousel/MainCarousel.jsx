@@ -11,6 +11,20 @@ import MainCarouselItem from "./MainCarouselItem.jsx";
 const MainCarousel = ({slides, activeIndex, setActiveIndex}) => {
     const [modalOpened, setModalOpened] = useState(false)
 
+    function handleWindowSizeChange() {
+        setWidth(window.innerWidth);
+    }
+    useEffect(() => {
+        window.addEventListener('resize', handleWindowSizeChange);
+        return () => {
+            window.removeEventListener('resize', handleWindowSizeChange);
+        }
+    }, []);
+
+    const [width, setWidth] = useState(window.innerWidth);
+
+    const isMobile = width <= 575;
+
     useEffect(() => {
         document.body.style.overflow = modalOpened ? 'hidden': 'visible'
     }, [modalOpened])
@@ -28,7 +42,7 @@ const MainCarousel = ({slides, activeIndex, setActiveIndex}) => {
                 <CloseModalButton closeModal={() => setModalOpened(false)}/>}
             <Swiper
                 spaceBetween={modalOpened? 0 : 8}
-                slidesPerView={1}
+                slidesPerView={(modalOpened ? 1 : (isMobile ? 1.1 : 1))}
                 keyboard
                 onSlideChange={swiper => setActiveIndex(swiper.activeIndex)}
             >

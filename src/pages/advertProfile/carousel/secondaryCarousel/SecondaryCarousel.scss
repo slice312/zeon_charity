@@ -1,36 +1,49 @@
-.secondaryCarousel{
-  padding: 8px 0;
-  max-width: 359px;
+@import "src/shared/styles/vars";
 
+.secondaryCarousel{
+  padding: 0 4px;
+  width: 100%;
+  height: 546px;
   .item{
     img {
-      width: 88px;
+      width: 100%;
       aspect-ratio: 1;
       object-fit: cover;
-      background-color: rgb(175, 138, 138);
+      //background-color: rgb(175, 138, 138);
       cursor: pointer;
     }
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: $xxl) {
   .secondaryCarousel{
-    max-width: 260px;
-    .item{
-      img {
-        width: 60px;
-      }
-    }
+    max-height: 453px;
   }
 }
 
-@media (max-width: 575px) {
+@media (max-width: $xl) {
   .secondaryCarousel{
-    max-width: 200px;
-    .item{
-      img {
-        width: 45px;
-      }
-    }
+    max-height: 380px;
+  }
+}
+
+@media (max-width: $lg) {
+  .secondaryCarousel{
+    padding: 0 2px;
+    height: 281px;
+  }
+}
+
+
+@media (max-width: $md) {
+  .secondaryCarousel{
+    padding: 0 2px;
+    height: 208px;
+  }
+}
+
+@media (max-width: $sm) {
+  .secondaryCarousel{
+    display: none;
   }
 }

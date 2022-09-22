@@ -12,6 +12,13 @@
     padding: 0 48px;
 }
 
+@media (max-width: $xxl) {
+    .container {
+        max-width: 1140px;
+        padding: 0 15px;
+    }
+}
+
 @media (max-width: $xl) {
     .container {
         max-width: 960px;
