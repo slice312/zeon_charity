@@ -1,3 +1,5 @@
+@import "src/shared/styles/vars";
+
 .secondaryCarousel{
   padding: 0 4px;
   width: 100%;
@@ -13,22 +15,35 @@
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: $xxl) {
   .secondaryCarousel{
-    .item{
-      img {
-        width: 160px;
-      }
-    }
+    max-height: 453px;
   }
 }
 
-@media (max-width: 575px) {
+@media (max-width: $xl) {
   .secondaryCarousel{
-    .item{
-      img {
-        width: 145px;
-      }
-    }
+    max-height: 380px;
+  }
+}
+
+@media (max-width: $lg) {
+  .secondaryCarousel{
+    padding: 0 2px;
+    height: 281px;
+  }
+}
+
+
+@media (max-width: $md) {
+  .secondaryCarousel{
+    padding: 0 2px;
+    height: 208px;
+  }
+}
+
+@media (max-width: $sm) {
+  .secondaryCarousel{
+    display: none;
   }
 }

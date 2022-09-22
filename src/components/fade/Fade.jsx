@@ -6,6 +6,11 @@ export default function FadeInSection(props) {
     const [loaded, setLoaded] = useState(false)
     const domRef = useRef();
 
+    let mode = 'fade-in-section'
+    if(props.mode === 'opacity'){
+        mode = 'fade-in-section opacity'
+    }
+
     useEffect(() => {
         if(isVisible) setLoaded(true)
     }, [isVisible])
@@ -18,7 +23,7 @@ export default function FadeInSection(props) {
     }, []);
     return (
         <div
-            className={`fade-in-section ${isVisible || loaded ? 'is-visible' : ''}`}
+            className={`${mode} ${isVisible || loaded ? 'is-visible' : ''}`}
             ref={domRef}
         >
             {props.children}

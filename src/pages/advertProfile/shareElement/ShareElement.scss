@@ -1,9 +1,15 @@
 .shareElement{
+  font-family: "Montserrat", "Arial", sans-serif;
+  padding-top: 20px;
   .shareElement__main{
     display: flex;
     align-items: center;
     svg{
       margin-right: 15px;
+    }
+    button{
+      color: #373d3f;
+      font-size: 18px;
     }
   }
   .shareElement__secondary{
