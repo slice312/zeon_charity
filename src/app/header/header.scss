@@ -1,0 +1,134 @@
+@import "../../shared/styles/vars";
+
+.header {
+  width: 100%;
+  padding: 20px 0;
+  font-family: 'Arial', sans-serif;
+  border-bottom: 1px solid #f0ece8;
+
+  &__logo {
+    height: 100%;
+    width: 100%;
+    transition: all 0.5s;
+
+    &:hover {
+      transform: scale(0.95);
+    }
+  }
+
+  &__logo-block {
+    width: 170px;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 18px;
+
+  }
+
+  &__nav {
+    display: flex;
+  }
+
+  &__menu-list {
+    width: 100%;
+    display: flex;
+    list-style: none;
+    gap: 40px;
+  }
+
+  &__menu-item {
+    a {
+      text-decoration: none;
+      color: $text-color;
+      transition: all 0.3s;
+
+      &:hover {
+        color: $btn-color2
+      }
+    }
+  }
+
+  &__buttons {
+    margin-left: auto;
+    display: flex;
+    justify-self: flex-end;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__buttons-item {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    transition: all 0.3s;
+
+    &--give-help {
+      background-color: $btn-color2;
+      border: 2px solid transparent;
+
+      &:hover {
+        color: $btn-color2;
+        border: 2px solid $btn-color2;
+        background-color: #fff;
+      }
+    }
+
+    &--language {
+      color: #000;
+      background-color: #fff;
+      border: 2px solid #000;
+
+      &:hover {
+        color: $btn-color2;
+        border: 2px solid $btn-color2;
+        background-color: #fff;
+      }
+    }
+  }
+
+  &__burger {
+    display: none;
+    width: 45px;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &-item {
+      background-color: #000;
+      height: 3px;
+      width: 100%;
+      margin-bottom: 7px;
+
+      &:last-child {
+        width: 60%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .header {
+
+    &__burger {
+      display: flex;
+
+    }
+
+    &__nav {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .header {
+    &__buttons-item--give-help {
+      display: none;
+    }
+  }
+}

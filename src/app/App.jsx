@@ -1,14 +1,12 @@
 import {useState} from 'react';
-import "./styles/index.scss";
-
-
 import {Router} from "./Router.jsx"
+import Header from "./header/header";
+import "./styles/index.scss"
 
 function App() {
-    const [count, setCount] = useState(0);
-
     return (
         <div className="App">
+          <Header/>
             <Router/>
         </div>
     );
