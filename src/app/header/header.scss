@@ -100,12 +100,32 @@
 
     &-item {
       background-color: #000;
-      height: 3px;
-      width: 100%;
       margin-bottom: 7px;
+      transition: 0.3s;
 
-      &:last-child {
+      &--top  {
+        width: 100%;
+        transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+        transform-style: preserve-3d;
+        height: 3px;
+
+        &--js-active {
+          transform: translate3d(1px, 8px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(135deg) skew(0deg, 0deg);
+          transform-style: preserve-3d;
+        }
+      }
+
+      &--bottom  {
         width: 60%;
+        transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+        transform-style: preserve-3d;
+        height: 3px;
+
+        &--js-active {
+          width: 100%;
+          transform: translate3d(2px, -3px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(45deg) skew(0deg, 0deg);
+          transform-style: preserve-3d;
+        }
       }
     }
   }

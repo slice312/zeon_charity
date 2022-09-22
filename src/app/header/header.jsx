@@ -42,9 +42,11 @@ const Header = () => {
             </ul>
           </nav>
           <div className="header__buttons">
-            <button className="header__burger" onClick={toggleSidebar}>
-              <div className="header__burger-item"/>
-              <div className="header__burger-item"/>
+            <button className={"header__burger "} onClick={toggleSidebar}>
+              <div className={"header__burger-item header__burger-item--top " +
+              (isSidebarOpened ? " header__burger-item--top--js-active" : "")}/>
+              <div className={"header__burger-item header__burger-item--bottom " +
+              (isSidebarOpened ? " header__burger-item--bottom--js-active" : "")}/>
             </button>
             <button type={"button"} className="header__buttons-item header__buttons-item--give-help">
               {
