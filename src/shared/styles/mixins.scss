@@ -1,14 +1,9 @@
-@mixin font-face($fontFamily, $weight, $size, $lineHeight, $color) {
-    font-family: $fontFamily;
+@mixin font-face($weight, $size, $lineHeight, $color) {
     font-weight: $weight;
     font-size: $size;
     line-height: $lineHeight;
     color: $color;
     font-style: normal;
-}
-
-@mixin font-default($weight, $size, $lineHeight, $color) {
-    @include font-face("Inter", $weight, $size, $lineHeight, $color);
 }
 
 
