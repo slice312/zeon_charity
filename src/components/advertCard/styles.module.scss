@@ -1,0 +1,94 @@
+@import "src/shared/styles/vars";
+@import "src/shared/styles/mixins";
+
+
+.root {
+    width: 300px;
+    //height: 464px;
+    @include flex-col(center, unset);
+
+    background-color: white;
+
+
+    .imgWrap {
+        border-radius: 10px;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .title {
+        @include font-face(600, 18px, normal, black);
+
+    }
+
+    .description {
+        @include font-face(400, 15px, normal, gray);
+        margin-bottom: 12px;
+        height: 50px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .progress {
+        @include font-face(400, 18px, normal, gray);
+
+        .progressAmount {
+            @include font-face(600, 18px, normal, black);
+
+        }
+
+        .progressIndicator {
+            position: relative;
+            width: 100%;
+            height: 8px;
+            border-radius: 35px;
+            overflow: hidden;
+
+            .progressIndicatorGray {
+                position: absolute;
+                z-index: 50;
+                background-color: gray;
+                width: 100%;
+                height: 100%;
+            }
+
+            .progressIndicatorStatus {
+                position: absolute;
+                z-index: 51;
+                background-color: #3838af;
+                height: 100%;
+            }
+        }
+    }
+
+    .btnHelp {
+        margin-top: 15px;
+        border-radius: 8px;
+        background-color: $btn-color2;
+        @include center-elements();
+        @include font-face(400, 18px, normal, white);
+        text-transform: capitalize;
+        padding: 10px 20px;
+        max-width: 100px;
+
+        &:hover {
+            background-color: #7888B9FF;
+            transition: 0.2s;
+        }
+
+        &:enabled:active {
+            transform: scale(0.98);
+        }
+
+        &:disabled {
+            cursor: default;
+            background-color: gray;
+        }
+    }
+}
