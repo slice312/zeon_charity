@@ -10,9 +10,7 @@ import {Data} from "src/assets/mock/data.js";
 
 
 
-export const Adverts = () => {
-    const {t} = useTranslation();
-
+export const AdvertsPage = () => {
     return (
         <div className={cn("container", css.root)}>
             <CardsContainer>
