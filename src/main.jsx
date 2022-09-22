@@ -7,6 +7,9 @@ import "./i18n";
 import {Provider} from "react-redux";
 
 import {store} from "src/store";
+import dayjs from "dayjs";
+import customParseFormat  from "dayjs/plugin/customParseFormat";
+dayjs.extend(customParseFormat);
 
 
 ReactDOM.createRoot(document.getElementById("root"))

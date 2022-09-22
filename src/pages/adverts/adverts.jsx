@@ -2,9 +2,9 @@ import css from "./styles.module.scss";
 import cn from "classnames"
 
 import {useTranslation} from "react-i18next";
-import {useEffect, useState} from "react";
 import {AdvertCard} from "src/components/advertCard";
 import {CardsContainer} from "src/shared/ui/cardsContainer";
+import {CountdownTimer} from "src/components/countdownTimer";
 
 import {Data} from "src/assets/mock/data.js";
 
