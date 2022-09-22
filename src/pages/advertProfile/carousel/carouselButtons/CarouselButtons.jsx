@@ -12,7 +12,7 @@ export const PrevButton = ({setActiveIndex, activeIndex, modalOpened}) => {
         <button className={`carouselButton prev ${modalOpened ? 'modalOpened' : ''}`}
                 onClick={() => setActiveIndex(activeIndex-1)}>
             <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2.59873 8L9.29937 14.7006L8 16L0 8L8 0L9.29937 1.29936L2.59873 8Z" fill="#706D7A"/>
+                <path d="M2.59873 8L9.29937 14.7006L8 16L0 8L8 0L9.29937 1.29936L2.59873 8Z" fill="white"/>
             </svg>
         </button>
     );
@@ -23,7 +23,7 @@ export const NextButton = ({setActiveIndex, activeIndex, modalOpened}) => {
         <button className={`carouselButton next ${modalOpened ? 'modalOpened' : ''}`}
                 onClick={() => setActiveIndex(activeIndex+1)}>
             <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M7.40127 8L0.700635 14.7006L2 16L10 8L2 0L0.700635 1.29936L7.40127 8Z" fill="#706D7A"/>
+                <path d="M7.40127 8L0.700635 14.7006L2 16L10 8L2 0L0.700635 1.29936L7.40127 8Z" fill="white"/>
             </svg>
         </button>
     );

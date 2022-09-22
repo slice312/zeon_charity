@@ -1,4 +1,3 @@
-@import "src/styles/mixins";
 
 .mainCarousel{
   position: relative;
@@ -36,7 +35,7 @@
       //aspect-ratio: 520/339;
       img{
         width: 100%;
-        aspect-ratio: 520/339;
+        aspect-ratio: 520/300;
         object-fit: cover;
       }
     }
