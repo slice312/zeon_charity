@@ -17,12 +17,12 @@ const SecondaryCarousel = ({slides, activeIndex, setActiveIndex}) => {
         <Swiper
             className={'secondaryCarousel'}
             spaceBetween={2}
-            slidesPerView={4}
+            slidesPerView={3}
+            direction={'vertical'}
         >
             {slides.map((slide, index) =>
-                <SwiperSlide key={slide.id}>
-                    <SecondaryCarouselItem key={slide.id}
-                                           slide={slide}
+                <SwiperSlide key={'secondary' + index}>
+                    <SecondaryCarouselItem slide={slide}
                                            setActiveIndex={setActiveIndex}
                                            activeIndex={activeIndex}
                                            index={index}/>
