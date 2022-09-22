@@ -1,29 +1,26 @@
 import css from "./styles.module.scss";
+import cn from "classnames"
 
 import {useTranslation} from "react-i18next";
 import {useEffect, useState} from "react";
+import {AdvertCard} from "src/components/advertCard";
+import {CardsContainer} from "src/shared/ui/cardsContainer";
+
+import {Data} from "./data";
+
+
 
 export const Adverts = () => {
-    const {t, i18n} = useTranslation();
-
-    const [locale, setLocale] = useState(i18n.language);
-
-    useEffect(() => {
-        i18n.changeLanguage(locale)
-            .then(() => console.log(`Localization changed to ${locale}`));
-    }, [locale]);
+    const {t} = useTranslation();
 
     return (
-        <div className={css.root}>
-            ss22
-            Home Page
-
-
-            <button  type={"button"} onClick={() => {
-                setLocale(locale === "EN" ? "RU" : "EN")
-            }} >
-                {t("doHelp")}
-            </button>
+        <div className={cn("container", css.root)}>
+            <CardsContainer>
+                {
+                    Data.adverts.map(advert =>
+                        <AdvertCard key={advert.id} advert={advert}/>)
+                }
+            </CardsContainer>
         </div>
     );
 };
