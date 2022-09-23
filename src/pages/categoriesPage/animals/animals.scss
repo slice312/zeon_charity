@@ -23,7 +23,7 @@
   min-height: 4px;
   margin-bottom: 24px;
   border-radius: 99999px;
-  background-color: #ff9c08;
+  background-color: #006EA1;;
 
 
 }
@@ -60,12 +60,17 @@
   bottom: 0;
   width: 47%;
   max-width: 100%;
+  overflow: hidden;
 }
 .preview__img img{
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+  transition: 0.5s;
+}
+.preview__img img:hover{
+  transform: scale(1.1);
 }
 .help__info-bg{
   background-color: #fef9f2;
@@ -100,7 +105,7 @@
 }
 
 .help_item h3 span {
-  color: #ff9c08;
+  color:#006EA1;;
   font-size: 52px;
 }
 .help_item p{
@@ -145,7 +150,7 @@
 }
 .about-us__title{
   margin-bottom: 16px;
-  color: #ff9c08;
+  color: #006EA1;;
   font-size: 20px;
   line-height: 1.1em;
   font-weight: 700;
@@ -169,6 +174,10 @@
   font-weight: 400;
   margin-bottom: 1em;
 }
+.first-col__img-box{
+  overflow: hidden;
+  border-radius: 12px;
+}
 .first-col__img-box img{
   vertical-align: middle;
   display: inline-block;
@@ -178,6 +187,11 @@
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 32px;
+  transition: 0.5s;
+
+}
+.first-col__img-box img:hover{
+  transform: scale(1.1);
 }
 .second-col{
   display: grid;
@@ -201,17 +215,16 @@
 }
 .second-col__btn button:nth-child(1){
   margin-right: 28px;
-
-  width: 180px;
+  width: 212px;
   padding: 26px 38px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
   border-radius: 10px;
-  background-color: #ff9c08;
+  background-color: #006EA1;;
   transition: background-color 300ms ease, transform 300ms ease, color 300ms ease, -webkit-transform 300ms ease;
-  color: #090909;
+  color: white;
   font-size: 18px;
   line-height: 1.111em;
   font-weight: 700;
@@ -220,6 +233,9 @@
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   cursor: pointer;
+}
+.second-col__btn button:nth-child(1):hover{
+  transform: translateY(-8px);
 }
 .second-col__btn button:nth-child(2){
   padding: 26px 38px;
@@ -247,6 +263,9 @@
     color: white;
   }
 }
+.second-col__content{
+  overflow: hidden;
+}
 .second-col__content__img{
   margin-bottom: 48px;
   border-radius: 10px;
@@ -255,6 +274,11 @@
   display: inline-block;
   max-width: 100%;
   vertical-align: middle;
+  transition: 0.5s;
+
+}
+.second-col__content__img:hover{
+  transform: scale(1.2);
 }
 .second-col__content__text{
   font-family: 'DM Sans', sans-serif;

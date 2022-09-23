@@ -1,6 +1,6 @@
 import css from "./styles.module.scss";
 import {useTranslation} from "react-i18next";
-import {Link} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import _ from "lodash";
 
 import emptyImg from "src/assets/images/empty-card-image.png";
@@ -17,12 +17,12 @@ export const AdvertCard = ({advert}) => {
         ? advert.description.substring(0, dotCharIndex + 1)
         : advert.description;
 
-    const progressPercent = Math.round(advert.progress_amount / advert.target_amount * 100);
+    const progressPercent = Math.round(advert.progress / advert.target * 100);
 
     return (
         <div className={css.root}>
             <div className={css.imgWrap}>
-                <img src={advert.images[0] || emptyImg} alt="img"/>
+                <img src={advert.images?.[0] || emptyImg} alt="img"/>
             </div>
             <div className={css.cityLabel}>
                 <span>
@@ -39,9 +39,9 @@ export const AdvertCard = ({advert}) => {
                 </p>
                 <div className={css.progress}>
                 <span className={css.progressAmount}>
-                    {advert.progress_amount.toLocaleString("ru")} сом&nbsp;
+                    {advert.progress.toLocaleString("ru")} сом&nbsp;
                 </span>
-                    {t("from")} {advert.target_amount.toLocaleString("ru")} сом
+                    {t("from")} {advert.target.toLocaleString("ru")} сом
                     <div className={css.progressIndicator}>
                         <div className={css.progressIndicatorGray}></div>
                         <div className={css.progressIndicatorStatus}
@@ -51,7 +51,7 @@ export const AdvertCard = ({advert}) => {
 
                     </div>
                 </div>
-                <Link to={`/advert/${advert.id}`} className={css.btnHelp}>
+                <Link to={`/advert-profile/${advert.id}`} className={css.btnHelp}>
                     {t("doHelp")}
                 </Link>
             </div>

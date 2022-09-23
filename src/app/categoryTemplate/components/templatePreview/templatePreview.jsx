@@ -8,7 +8,6 @@ const TemplatePreview = () => {
     <section className="template-preview">
       <div className="container">
 
-        <div className="template-preview__line"/>
         <div className="template-preview__head">
           <h2 className="template-preview__title">
             The mission behind our charity foundation

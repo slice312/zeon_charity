@@ -4,7 +4,7 @@
 
 .root {
     position: relative;
-    max-height: 430px;
+    max-height: 450px;
     @include flex-col();
     overflow: hidden;
     background-color: white;
@@ -40,7 +40,6 @@
 
         .title {
             @include font-face(600, 18px, normal, black);
-
         }
 
         .description {
@@ -56,11 +55,10 @@
 
         .progress {
             margin-top: 10px;
-            @include font-face(400, 18px, normal, gray);
+            @include font-face(400, 16px, normal, gray);
 
             .progressAmount {
                 @include font-face(600, 18px, normal, black);
-
             }
 
             .progressIndicator {
@@ -114,9 +112,3 @@
     }
 }
 
-
-@media (max-width: $lg) {
-    .root {
-
-    }
-}
