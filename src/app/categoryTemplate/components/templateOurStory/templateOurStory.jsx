@@ -15,12 +15,10 @@ const TemplateOurStory = () => {
           Why did we start this foundation?
         </h2>
         <p className="template-story__text template-story__text--first second-template__text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit lobortis arcu enim urna adipiscing praesent velit
-          viverra sit semper lorem eu cursus vel hendrerit elementum morbi curabitur etiam nibh justo, lorem alique.
-        </p>
-        <p className="template-story__text section-template__text second-template__text">
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Many people are used to thinking that the future is somewhere far away. These are dreams, plans, hopes for the
+          best. We, our Lifeline Foundation, are shaping this future right now. Every day. What is our future like?
+          First of all, these are children! Their health, their laughter, happy smiles and forward-looking eyes - after
+          all, they will continue to change our world.
         </p>
       </div>
     </section>

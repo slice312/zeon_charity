@@ -14,8 +14,7 @@ const TemplateOurMission = () => {
           The mission we are working towards
         </h2>
         <p className="template-mission__text second-template__text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit lobortis arcu enim urna adipiscing praesent velit
-          viverra sit semper lorem eu cursus vel hendrerit elementum morbi curabitur etiam nibh justo, lorem alique.
+          The future, technology, children. These three words are our everyday reality and concern. These three words are inspiration, both for us and for numerous partners and friends of the foundation, each of whom wants to contribute to our common tomorrow.
         </p>
         <button className="template-mission-btn template-preview__btn template-preview__btn--donate">
           Donate now
@@ -26,8 +25,8 @@ const TemplateOurMission = () => {
           Our mission is to eradicate hunger, poverty and war
         </h3>
         <p className="template-window__text second-template__text">
-          Aliquam ultrices sagittis orci a scelerisque eu ultrices vitae auctor eu augue odio tempor orci dapibus
-          ultrices in iaculis Iaculis at erat pellentesque adipiscing
+          Our mission is to inspire the support and implementation of the most incredible high—tech projects that can
+          give the future and health to as many children as possible.
         </p>
         <ul className="template-window__list">
           <li className="template-window__item">

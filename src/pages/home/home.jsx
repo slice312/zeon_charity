@@ -7,43 +7,38 @@ import image2 from '../../assets/images/old-help.jpg';
 import image3 from '../../assets/images/poor-help.jpg';
 import image4 from '../../assets/images/nature-help.jpg';
 import {useTranslation} from "react-i18next";
+import {useNavigate} from "react-router-dom";
 
 export const Home = () => {
     const {t} = useTranslation();
+    const navigate = useNavigate()
 
     const categories = [
         {
             title: t("category.childTitle"),
             description: t("category.childDesc"),
             image: image1,
-            link: '/adverts/1'
+            link: '/animals/1'
         },
         {
             title: t("category.elderlyTitle"),
             description: t("category.elderlyDesc"),
             image: image2,
-            link: '/adverts/2'
+            link: '/elderly/2'
         },
-        {
-            title: t("category.destituteTitle"),
-            description: t("category.destituteDesc"),
-            image: image3,
-            link: '/adverts/3'
-        },
-        // {
-        //     title: t("category.destituteTitle"),
-        //     description: t("category.destituteDesc"),
-        //     image: image3,
-        //     link: '/'
-        // },
         {
             title: t("category.natureTitle"),
             description: t("category.natureDesc"),
             image: "https://imgs.search.brave.com/HpZeI4yTp7p4r2Jz3uiWBV2xO-41ASsCrfzfjvAAkGo/rs:fit:1200:880:1/g:ce/aHR0cHM6Ly9sZXNz/LWhvbWVsZXNzLmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAy/MC8wOC8lRDAlOUEl/RDAlQkUlRDAlQkYl/RDAlQjglRDElOEYt/MDE3LTEzMjB4ODgw/LmpwZw",
-            link: '/adverts/4'
-        }]
-
-
+            link: '/nature/4'
+        },
+        {
+            title: t("deti"),
+            description: t("category.batkenDesc"),
+            image: "https://emosurff.com/i/0003Kx0drOyD/2.jpg",
+            link: '/children/5'
+        },
+    ];
     return (
         <div className={'home'}>
             <div className="container">
@@ -60,7 +55,9 @@ export const Home = () => {
                                 {t("doSee")}
                             </button>
                             <button>
-                                {t("doHelp")}
+                                <a href="tel:+996777888266">
+                                    {t("doHelp")}
+                                </a>
                             </button>
                         </FadeInSection>
                     </div>

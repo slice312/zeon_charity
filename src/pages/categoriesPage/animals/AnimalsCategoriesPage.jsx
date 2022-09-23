@@ -1,7 +1,15 @@
 import React from 'react';
-import "./animals.scss"
+import "./animals.scss";
+import {useParams} from "react-router-dom";
+import {advertApi} from "../../../store/advertApi.js";
+import {CardsContainer} from "../../../shared/ui/cardsContainer/index.jsx";
+import {AdvertCard} from "../../../components/advertCard/index.jsx";
 
 const AnimalsCategoriesPage = ({data}) => {
+    const params = useParams();
+
+    const {data: adverts} = advertApi.useGetAdvertsQuery({categoryId: undefined});
+
 
     return (
         <section className="animals__categories">
@@ -100,7 +108,14 @@ const AnimalsCategoriesPage = ({data}) => {
                             </div>
                         </div>
                     </div>
+                    <CardsContainer>
+                        {
+                            adverts?.map(advert =>
+                                <AdvertCard key={advert.id} advert={advert}/>)
+                        }
+                    </CardsContainer>
                 </div>
+
             </div>
         </section>
 
