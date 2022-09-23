@@ -1,0 +1,39 @@
+.shareElement{
+  font-family: "Montserrat", "Arial", sans-serif;
+  padding-top: 20px;
+  .shareElement__main{
+    display: flex;
+    align-items: center;
+    svg{
+      margin-right: 15px;
+    }
+    button{
+      color: #373d3f;
+      font-size: 18px;
+    }
+  }
+  .shareElement__secondary{
+    display: flex;
+    margin-top: 11px;
+    column-gap: 10px;
+    .shareElement__secondary__item{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 36px;
+      height: 36px;
+      border: 1px solid #EDF1FD;
+      border-radius: 8px;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .shareElement{
+    .shareElement__secondary{
+      .shareElement__secondary__item{
+        margin: 5px 0 20px;
+      }
+    }
+  }
+}

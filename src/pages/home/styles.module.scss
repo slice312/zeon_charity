@@ -4,6 +4,14 @@
   margin: 0 auto;
   padding: 0 10px;
 }
+
+.home{
+  .container{
+    .banner-image{
+      width: 100%;
+    }
+  }
+}
 @media ($xl) {
   .carousel__container{
     max-width: 1140px;

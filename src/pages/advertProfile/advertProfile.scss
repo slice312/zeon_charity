@@ -1,0 +1,182 @@
+@import "src/shared/styles/vars";
+
+.advertProfile{
+  padding: 20px 0;
+  .container{
+    .banner {
+      .banner-info {
+        width: 100%;
+        h2 {
+          font-family: "Montserrat", "Arial", sans-serif;
+          font-size: 42px;
+          font-weight: 700;
+          color: #373d3f;
+          max-width: 960px;
+          padding-bottom: 10px;
+        }
+        .advert-carousel{
+          display: flex;
+          .carousel-wrapper{
+            &.main{
+              width: 85%;
+            }
+            &.secondary{
+              width: 15%;
+            }
+          }
+        }
+      }
+      .banner-charts{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 100px 0;
+        .charts-description{
+          width: 100%;
+          padding-left: 40px;
+          .charts-description__title{
+            font-size: 34px;
+            font-weight: 700;
+            color: #4B5FA5;
+          }
+          .charts-description__content{
+            font-size: 34px;
+            font-weight: 700;
+            padding-bottom: 20px;
+          }
+        }
+      }
+    }
+    .advert-description{
+      color: #373d3f;
+      h2{
+        font-size: 42px;
+        font-weight: 700;
+      }
+      p{
+        font-size: 24px;
+        line-height: 28px;
+        padding: 20px 0;
+      }
+    }
+  }
+}
+
+@media (max-width: $lg) {
+  .advertProfile{
+    .container{
+      .banner{
+        .banner-info{
+          h2{
+            font-size: 32px;
+          }
+        }
+        .banner-charts{
+          padding: 50px 0;
+          .charts-description{
+            .charts-description__title{
+              font-size: 24px;
+            }
+            .charts-description__content{
+              font-size: 24px;
+            }
+          }
+        }
+      }
+      .advert-description{
+        h2{
+          font-size: 24px;
+        }
+        p {
+          font-size: 18px;
+          line-height: 24px;
+          padding: 10px 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .advertProfile{
+    .container{
+      .banner{
+        .banner-info{
+          h2{
+            font-size: 24px;
+          }
+        }
+        .banner-charts{
+          padding: 30px 0;
+          .charts-description{
+            padding-left: 0;
+            .charts-description__title{
+              font-size: 18px;
+            }
+            .charts-description__content{
+              font-size: 18px;
+            }
+          }
+        }
+      }
+      .advert-description{
+        h2{
+          font-size: 20px;
+        }
+        p {
+          font-size: 16px;
+          line-height: 18px;
+          padding: 5px 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .advertProfile{
+    .container{
+      .banner{
+        .banner-info{
+          h2{
+            font-size: 18px;
+          }
+          .advert-carousel{
+            .carousel-wrapper{
+              &.main{
+                width: 100%;
+              }
+            }
+          }
+        }
+        .banner-charts{
+          padding: 30px 0;
+          flex-wrap: wrap;
+          .charts-description{
+            padding-left: 0;
+            padding-top: 20px;
+            .charts-description__title{
+              font-size: 18px;
+              text-align: center;
+              padding: 10px 0;
+            }
+            .charts-description__content{
+              font-size: 18px;
+              text-align: center;
+            }
+          }
+        }
+      }
+      .advert-description{
+        h2{
+          font-size: 20px;
+        }
+        p {
+          font-size: 16px;
+          line-height: 18px;
+          padding: 5px 0;
+        }
+      }
+    }
+  }
+}

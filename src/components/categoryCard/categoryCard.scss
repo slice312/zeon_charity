@@ -1,0 +1,127 @@
+@import  "src/shared/styles/vars";
+
+.categoryCard{
+  cursor: default;
+  width: 100%;
+  *{
+    font-family: "Montserrat", "Arial", sans-serif;
+  }
+  .category-image{
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    img{
+      width: 100%;
+      aspect-ratio: 1;
+      border-radius: 12px;
+      object-fit: cover;
+      transition: 1s;
+    }
+  }
+  .category-content{
+    background-color: white;
+    padding: 30px 50px 30px 30px;
+    transform: translateY(calc(-30% + 10px));
+    width: calc(100% - 60px);
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02), 0 4px 8px rgba(0,0,0,0.04);
+    transition: 1s;
+    h3{
+      font-size: 32px;
+      font-weight: 700;
+      color: $btn-color2;
+      padding-bottom: 10px;
+    }
+    p{
+      font-size: 20px;
+      line-height: 24px;
+      color: $btn-color1;
+    }
+    button{
+      padding: 10px 50px 10px 30px;
+      font-size: 24px;
+      border: 1px solid $btn-color2;
+      border-radius: 8px;
+      margin-top: 20px;
+      color: $btn-color2;
+      transition: .2s;
+      &:hover{
+        background-color: $btn-color2;
+        color: white;
+      }
+    }
+  }
+  &:hover{
+    .category-image{
+      img{
+        transform: scale(1.03);
+      }
+    }
+    .category-content{
+      transition: 1s;
+      transform: translateY(-30%);
+    }
+  }
+}
+
+@media (max-width: $xl) {
+  .categoryCard{
+    .category-image{
+      img{
+        aspect-ratio: 2;
+      }
+    }
+    .category-content{
+      width: 100%;
+      border-radius: 0 0 12px 12px;
+    }
+  }
+}
+
+@media (max-width: $lg) {
+  .categoryCard{
+    .category-image{
+      img{
+        aspect-ratio: 1.5;
+      }
+    }
+    .category-content{
+      width: 100%;
+      border-radius: 0 0 12px 12px;
+      padding: 20px 20px;
+      h3{
+        font-size: 24px;
+      }
+      button{
+        width: 100%;
+        padding: 10px 0;
+      }
+    }
+  }
+}
+
+
+@media (max-width: $sm) {
+  .categoryCard{
+    .category-image{
+      img{
+        aspect-ratio: 1;
+      }
+    }
+    .category-content{
+      width: 100%;
+      border-radius: 0 0 12px 12px;
+      padding: 20px 20px;
+      h3{
+        font-size: 18px;
+      }
+      p{
+        font-size: 16px;
+      }
+      button{
+        width: 100%;
+        padding: 10px 0;
+      }
+    }
+  }
+}

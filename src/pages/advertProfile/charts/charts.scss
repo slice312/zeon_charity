@@ -1,0 +1,31 @@
+@import "src/shared/styles/vars";
+
+.charts{
+  width: 100%;
+  max-width: 700px;
+}
+
+@media (max-width: $xl) {
+  .charts{
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+
+@media (max-width: $md) {
+  .charts{
+    width: 300px;
+    margin: 0 auto;
+  }
+}
+
+
+@media (max-width: $xl) {
+  .charts{
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+
