@@ -35,7 +35,7 @@ export const Home = () => {
             description: t("category.natureDesc"),
             image: image4,
             link: '/'
-        }
+        }]
     return (
         <div className={'home'}>
             <div className="container">
