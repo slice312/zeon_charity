@@ -25,12 +25,6 @@ const Sidebar = ({isSidebarOpened, toggleSidebar}) => {
         <nav className="sidebar__nav">
           <ul className="sidebar__menu-list">
             <li className="header__menu-item" onClick={onRedirectToPage}>
-              <Link to={'/fund'}>{t('fund')}</Link>
-            </li>
-            <li className="header__menu-item" onClick={onRedirectToPage}>
-              <Link to={'/statistics'}>{t('statistics')}</Link>
-            </li>
-            <li className="header__menu-item" onClick={onRedirectToPage}>
               <Link to={'/contacts'}>{t("contacts")}</Link>
             </li>
           </ul>
