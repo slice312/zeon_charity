@@ -8,6 +8,7 @@ import image1 from '../../assets/images/children-help.jpeg'
 import image2 from '../../assets/images/old-help.jpg'
 import image3 from '../../assets/images/poor-help.jpg'
 import image4 from '../../assets/images/nature-help.jpg'
+import {useNavigate} from "react-router-dom";
 
 export const Home = () => {
     const categories = [
@@ -36,6 +37,9 @@ export const Home = () => {
             link: '/'
         }
     ]
+
+    const navigate = useNavigate()
+
     return (
         // <div className={css.carousel__container}>
         //     <MainCarousel/>
@@ -51,8 +55,11 @@ export const Home = () => {
                             <p>
                                 Объявлен сбор средств для оказания помощи Баткену
                             </p>
+                            <button onClick={() => navigate('/batken')}>
+                                Смотреть
+                            </button>
                             <button>
-                                Помочь
+                                <a href={'tel: +996995123130'}>Мне нужна помощь</a>
                             </button>
                         </FadeInSection>
                     </div>
@@ -65,7 +72,7 @@ export const Home = () => {
                     <div className={'categories-content'}>
                         {categories.map((item, index) =>
                             <div className={'category-item'} key={index}>
-                            <CategoryCard {...item}/>
+                                <CategoryCard {...item}/>
                             </div>
                         )}
                     </div>
