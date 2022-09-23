@@ -8,7 +8,6 @@ import image3 from '../../assets/images/poor-help.jpg';
 import image4 from '../../assets/images/nature-help.jpg';
 import {useTranslation} from "react-i18next";
 
-
 export const Home = () => {
     const {t} = useTranslation();
 
@@ -37,7 +36,6 @@ export const Home = () => {
             image: image4,
             link: '/'
         }
-    ];
     return (
         <div className={'home'}>
             <div className="container">
@@ -50,6 +48,9 @@ export const Home = () => {
                             <p>
                                 {t("batkenHelpDesc")}
                             </p>
+                            <button onClick={() => navigate('/batken')}>
+                                Смотреть
+                            </button>
                             <button>
                                 {t("doHelp")}
                             </button>
