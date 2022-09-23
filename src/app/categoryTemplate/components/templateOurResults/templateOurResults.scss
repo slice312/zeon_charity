@@ -1,0 +1,80 @@
+@import "../../../../shared/styles/vars";
+
+.template-results {
+  padding-top: 140px;
+  padding-bottom: 200px;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__subtitle {
+    margin-bottom: 16px;
+
+  }
+
+  &__title {
+    max-width: 624px;
+    margin-bottom: 24px;
+  }
+
+  &__content {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__content-item {
+    color: #090909;
+    font-size: 60px;
+    line-height: 1.333em;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    span {
+      color: $btn-color2;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 1.1em;
+      color: #6e6e6e;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .template-results {
+    &__content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-row-gap: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .template-results {
+    padding-bottom: 150px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .template-results {
+    padding-bottom: 100px;
+
+    &__content-item {
+      font-size: 46px;
+
+      p {
+        width: 120px;
+      }
+    }
+  }
+}

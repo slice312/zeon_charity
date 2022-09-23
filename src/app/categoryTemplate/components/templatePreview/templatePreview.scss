@@ -1,0 +1,123 @@
+@import "../../../../shared/styles/vars";
+
+.template-preview {
+  &__line {
+    width: 140px;
+    height: 4px;
+    margin-bottom: 24px;
+    border-radius: 5px;
+    background-color: $btn-color2;
+  }
+
+  &__head {
+    margin-bottom: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    max-width: 690px;
+    color: #090909;
+    font-size: 54px;
+    line-height: 1.333em;
+    font-weight: 700;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+  }
+
+  &__btn {
+    padding: 28px 34px;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: .3s;
+    white-space: nowrap;
+
+    &--donate {
+      margin-right: 28px;
+      background-color: $btn-color2;
+      color: #fff;
+      font-weight: 700;
+
+      &:hover {
+        background-color: #015a82;
+        transform: translateY(-3px);
+      }
+    }
+
+    &--help {
+      border: 1px solid #f0ece8;
+      box-shadow: 0 4px 10px 0 rgb(43 43 43 / 4%);
+
+      &:hover {
+        background-color: $btn-color1;
+        transform: translateY(-3px);
+        color: #fff;
+      }
+    }
+  }
+
+  &__image-block {
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &--big {
+      width: 81%;
+      max-width: 990px;
+    }
+
+    &--small {
+      width: 49%;
+      max-width: 594px;
+      margin-top: -37%;
+      margin-left: auto;
+    }
+
+    img {
+      width: 100%;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .template-preview {
+    &__head {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .template-preview {
+    &__title {
+      font-size: 48px;
+    }
+
+    &__buttons {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &__btn {
+      width: 100%;
+      margin-right: unset;
+      padding: 20px 24px;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+  }
+}
