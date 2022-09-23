@@ -51,7 +51,7 @@ export const Home = () => {
                             <p>
                                 {t("batkenHelpDesc")}
                             </p>
-                            <button onClick={() => navigate('/batken')}>
+                            <button onClick={() => navigate('/batken/5')}>
                                 {t("doSee")}
                             </button>
                             <button>
