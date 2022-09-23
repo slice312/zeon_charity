@@ -15,7 +15,7 @@ import {useParams} from "react-router-dom";
 export const AdvertsPage = () => {
     const params = useParams()
 
-    const {data: adverts} = advertApi.useGetAdvertsQuery({categoryId: undefined});
+    const {data: adverts} = advertApi.useGetAdvertsQuery({categoryId: params.id});
 
     return (
         <div className={cn("container", css.root)}>
