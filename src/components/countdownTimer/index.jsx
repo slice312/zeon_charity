@@ -132,5 +132,3 @@ function flip(flipCard, newNumber) {
 
 
 CountdownTimer.propTypes = propTypes;
-
-;

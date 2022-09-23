@@ -4,9 +4,8 @@ import MainCarousel from "./carousel/mainCarousel/MainCarousel.jsx";
 import SecondaryCarousel from "./carousel/secondaryCarousel/SecondaryCarousel.jsx";
 import Charts from "./charts/Charts.jsx";
 import Fade from "../../components/fade/Fade.jsx"
-import Timer from "./timer/Timer.jsx";
 import ShareElement from "./shareElement/ShareElement.jsx";
-
+import {CountdownTimer} from "../../components/countdownTimer";
 
 
 const AdvertProfile = () => {
@@ -78,6 +77,7 @@ const AdvertProfile = () => {
                                         {need}$
                                     </p>
                                 </Fade>
+                                {/*<CountdownTimer/>*/}
                             </div>
                         </div>
                 </div>
