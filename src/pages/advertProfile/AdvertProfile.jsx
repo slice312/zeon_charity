@@ -97,7 +97,7 @@ const AdvertProfile = () => {
                             </div>
                         </div>
                 </div>
-                <div style={{paddind: 20}}><CountdownTimer endDate={"25.10.2022"}/></div>
+                <div style={{padding: 20}}><CountdownTimer endDate={"24.09.2022"}/></div>
                 <div className={'advert-description'}>
                     <h2>
                         Описание
