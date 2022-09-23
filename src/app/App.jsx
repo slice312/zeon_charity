@@ -7,7 +7,7 @@ export const App = () => {
     console.log("APP", import.meta.env.VITE_WEB_API_URL);
 
     // useEffect(() => {
-    //     fetch("https://netrunner.pythonanywhere.com/api/v1/cities/", {
+    //     fetch("http://192.168.31.53:8000/api/v1/cities/", {
     //         method: "GET"
     //     })
     //         .then(re => {
