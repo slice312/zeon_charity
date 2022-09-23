@@ -8,11 +8,14 @@ import {CountdownTimer} from "src/components/countdownTimer";
 
 import {Data} from "src/assets/mock/data.js";
 import {advertApi} from "../../store/advertApi.js";
+import {useParams} from "react-router-dom";
 
 
 
 export const AdvertsPage = () => {
-    const {data: adverts} = advertApi.useGetAdvertsQuery();
+    const params = useParams()
+
+    const {data: adverts} = advertApi.useGetAdvertsQuery({categoryId: params.id});
 
     return (
         <div className={cn("container", css.root)}>

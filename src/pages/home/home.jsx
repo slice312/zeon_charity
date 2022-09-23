@@ -16,13 +16,19 @@ export const Home = () => {
             title: t("category.childTitle"),
             description: t("category.childDesc"),
             image: image1,
-            link: '/'
+            link: '/adverts/1'
         },
         {
             title: t("category.elderlyTitle"),
             description: t("category.elderlyDesc"),
             image: image2,
-            link: '/elderly'
+            link: '/adverts/2'
+        },
+        {
+            title: t("category.destituteTitle"),
+            description: t("category.destituteDesc"),
+            image: image3,
+            link: '/adverts/3'
         },
         // {
         //     title: t("category.destituteTitle"),
@@ -33,16 +39,9 @@ export const Home = () => {
         {
             title: t("category.natureTitle"),
             description: t("category.natureDesc"),
-            image: image4,
-            link: '/nature'
-        },
-        {
-            title: t("category.animalsTitle"),
-            description: t("category.animalsDesc"),
             image: "https://imgs.search.brave.com/HpZeI4yTp7p4r2Jz3uiWBV2xO-41ASsCrfzfjvAAkGo/rs:fit:1200:880:1/g:ce/aHR0cHM6Ly9sZXNz/LWhvbWVsZXNzLmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAy/MC8wOC8lRDAlOUEl/RDAlQkUlRDAlQkYl/RDAlQjglRDElOEYt/MDE3LTEzMjB4ODgw/LmpwZw",
-            link: '/nature'
-        }
-        ]
+            link: '/adverts/4'
+        }]
     return (
         <div className={'home'}>
             <div className="container">

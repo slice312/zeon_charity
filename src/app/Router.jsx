@@ -51,7 +51,7 @@ export const Router = () => {
   return (
     <Routes>
       <Route path="/" element={<Home/>}/>
-      <Route path="/adverts" element={<AdvertsPage/>}/>
+      <Route path="/adverts/:id" element={<AdvertsPage/>}/>
       <Route path="/post-advert" element={<PostAdvert/>}/>
       <Route path="/advert-profile" element={<AdvertProfile/>}/>
       <Route path="/paybox" element={<PayboxTest/>}/>

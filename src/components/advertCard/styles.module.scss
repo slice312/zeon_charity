@@ -56,11 +56,10 @@
 
         .progress {
             margin-top: 10px;
-            @include font-face(400, 18px, normal, gray);
+            @include font-face(400, 16px, normal, gray);
 
             .progressAmount {
                 @include font-face(600, 18px, normal, black);
-
             }
 
             .progressIndicator {
