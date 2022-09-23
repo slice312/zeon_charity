@@ -51,8 +51,8 @@ export const Home = () => {
                             <p>
                                 {t("batkenHelpDesc")}
                             </p>
-                            <button onClick={() => navigate('/batken/5')}>
-                                Смотреть
+                            <button onClick={() => navigate('/batken')}>
+                                {t("doSee")}
                             </button>
                             <button>
                                 <a href="tel:+996777888266">
