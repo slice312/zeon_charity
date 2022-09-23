@@ -1,0 +1,54 @@
+@import "src/shared/styles/vars";
+
+.advert{
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 10px 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.10), 0 14px 18px rgba(0,0,0,0.05);
+  .advert-content{
+    p{
+      font-size: 18px;
+      line-height: 22px;
+    }
+    .advert-tel{
+      padding: 10px 0;
+      font-size: 24px;
+      color: #1D1D1B;
+      a{
+        color: $btn-color2;
+      }
+    }
+  }
+  .advert-date{
+    font-size: 18px;
+  }
+}
+
+@media (max-width: $lg) {
+  .advert{
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+  }
+}
+
+@media (max-width: $sm) {
+  .advert{
+    box-shadow: none;
+    padding: 0 0 10px;
+    gap: 0;
+    border-bottom: 1px dashed $btn-color2;
+    border-radius: 0;
+    margin-bottom: 50px;
+    .advert-content{
+      p{
+        font-size: 16px;
+        line-height: 18px;
+      }
+    }
+
+  }
+}
