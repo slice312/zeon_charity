@@ -57,7 +57,7 @@ export const Router = () => {
       <Route path="/paybox" element={<PayboxTest/>}/>
       <Route path="/fund" element={<CategoryTemplate/>}/>
       <Route path="/animals/:id" element={<AnimalsCategoriesPage data={data[0]}/>}/>
-      <Route path="/elderly" element={<AnimalsCategoriesPage data={data[1]}/>}/>
+      <Route path="/elderly/:id" element={<AnimalsCategoriesPage data={data[1]}/>}/>
       <Route path="/nature/:id" element={<AnimalsCategoriesPage data={data[2]}/>}/>
       <Route path="/batken/:id" element={<Batken/>}/>
       <Route path="/contacts" element={<Contacts/>}/>
