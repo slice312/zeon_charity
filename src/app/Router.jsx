@@ -56,11 +56,11 @@ export const Router = () => {
       <Route path="/advert-profile/:id" element={<AdvertProfile/>}/>
       <Route path="/paybox" element={<PayboxTest/>}/>
       <Route path="/fund" element={<CategoryTemplate/>}/>
-      <Route path="/animals" element={<AnimalsCategoriesPage data={data[0]}/>}/>
+      <Route path="/animals/:id" element={<AnimalsCategoriesPage data={data[0]}/>}/>
       <Route path="/elderly" element={<AnimalsCategoriesPage data={data[1]}/>}/>
-      <Route path="/nature" element={<AnimalsCategoriesPage data={data[2]}/>}/>
-      <Route path="/batken" element={<Batken/>}/>
-      <Route path="/contacts" element={<Contacts/>}/>
+      <Route path="/nature/:id" element={<AnimalsCategoriesPage data={data[2]}/>}/>
+      <Route path="/batken/:id" element={<Batken/>}/>
+      <Route path="/contacts/:id" element={<Contacts/>}/>
     </Routes>
   );
 };

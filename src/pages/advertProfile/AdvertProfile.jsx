@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './advertProfile.scss'
 import MainCarousel from "./carousel/mainCarousel/MainCarousel.jsx";
 import SecondaryCarousel from "./carousel/secondaryCarousel/SecondaryCarousel.jsx";
@@ -6,9 +6,23 @@ import Charts from "./charts/Charts.jsx";
 import Fade from "../../components/fade/Fade.jsx"
 import ShareElement from "./shareElement/ShareElement.jsx";
 import {CountdownTimer} from "../../components/countdownTimer";
+import {useParams} from "react-router-dom";
 
 
 const AdvertProfile = () => {
+    const params = useParams();
+    const [advert, setAdvert] = useState(null);
+
+    useEffect(() => {
+        (async () => {
+            try {
+                const response =  await fetch(`${import.meta.env.VITE_WEB_API_URL}/donation/${params.id}`)
+
+            } catch (e) {
+
+            }
+        })();
+    })
 
     const slides = [
         {

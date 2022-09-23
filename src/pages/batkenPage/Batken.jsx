@@ -3,8 +3,17 @@ import './batken.scss'
 import image1 from '../../assets/images/batken-profile-1.jpg'
 import image2 from '../../assets/images/batken-profile-2.jpg'
 import Advert from "./advert/Advert.jsx";
+import {useParams} from "react-router-dom";
+import {advertApi} from "../../store/advertApi.js";
+import {CardsContainer} from "../../shared/ui/cardsContainer/index.jsx";
+import {AdvertCard} from "../../components/advertCard/index.jsx";
 
 const Batken = () => {
+
+    const params = useParams()
+
+    const {data: adverts} = advertApi.useGetAdvertsQuery({categoryId: params.id});
+
     const need = [
         {
             tel: '+996995123130',
@@ -128,6 +137,12 @@ const Batken = () => {
                         Показать больше
                     </button>
                 }
+                <CardsContainer>
+                    {
+                        adverts?.map(advert =>
+                            <AdvertCard key={advert.id} advert={advert}/>)
+                    }
+                </CardsContainer>
             </div>
         </div>
     );
