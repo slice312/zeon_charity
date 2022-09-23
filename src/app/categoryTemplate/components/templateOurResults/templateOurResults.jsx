@@ -1,6 +1,6 @@
 import './templateOurResults.scss'
 
-const TemplateOurResults = () => {
+const TemplateOurResults = ({}) => {
   return (
     <section className="template-results">
       <div className="container">

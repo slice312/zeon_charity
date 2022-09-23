@@ -65,8 +65,10 @@
     overflow: hidden;
     transition: 0.3s;
 
-    &:hover {
-      transform: scale(1.05);
+    img {
+      &:hover {
+        transform: scale(1.02);
+      }
     }
 
     &--big {
