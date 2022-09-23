@@ -1,0 +1,47 @@
+.send-message {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  &__text-content {
+    width: 40%;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    font-family: Bespokeserif, sans-serif;
+    color: #090909;
+    font-size: 42px;
+    line-height: 1.381em;
+    font-weight: 700;
+  }
+
+  &__subtitle {
+    margin-bottom: 8px;
+    font-family: Bespokeserif, sans-serif;
+    color: #090909;
+    font-size: 24px;
+    line-height: 1.417em;
+    font-weight: 700;
+  }
+
+  &__text {
+    margin-bottom: 32px;
+  }
+
+  &__img-block {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .send-message {
+    text-align: center;
+    flex-direction: column;
+  }
+}
