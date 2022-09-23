@@ -1,5 +1,5 @@
-import previewFirstImage from "../../../../assets/images/template-preview_1.jpeg";
-import previewSecontImage from "../../../../assets/images/template-preview_2.jpeg";
+import previewFirstImage from "../../../../assets/images/children-help.jpeg"
+import previewSecontImage from "../../../../assets/images/chlidren2.jpeg"
 import './templatePreview.scss'
 
 
