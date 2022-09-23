@@ -5,6 +5,7 @@ import {PostAdvert} from "src/pages/postAdvert";
 import AdvertProfile from "../pages/advertProfile/AdvertProfile.jsx";
 import {PayboxTest} from "src/pages/payboxTest";
 import CategoryTemplate from "./categoryTemplate/categoryTemplate";
+import Contacts from "../pages/contacts/contacts";
 
 export const Router = () => {
   return (
@@ -15,6 +16,7 @@ export const Router = () => {
       <Route path="/advert-profile" element={<AdvertProfile/>}/>
       <Route path="/paybox" element={<PayboxTest/>}/>
       <Route path="/fund" element={<CategoryTemplate/>}/>
+      <Route path="/contacts" element={<Contacts/>}/>
     </Routes>
   );
 };
