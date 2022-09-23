@@ -42,12 +42,6 @@ const Header = () => {
           <nav className="header__nav">
             <ul className="header__menu-list">
               <li className="header__menu-item">
-                <Link to={'/fund'}>{t('fund')}</Link>
-              </li>
-              <li className="header__menu-item">
-                <Link to={'/statistics'}>{t('statistics')}</Link>
-              </li>
-              <li className="header__menu-item">
                 <Link to={'/contacts'}>{t("contacts")}</Link>
               </li>
             </ul>

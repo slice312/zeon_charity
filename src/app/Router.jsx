@@ -62,6 +62,7 @@ export const Router = () => {
       <Route path="/batken/:id" element={<Batken/>}/>
       <Route path="/contacts/:id" element={<Contacts/>}/>
       <Route path="/children/:id" element={<CategoryTemplate/>}/>
+      <Route path="/contacts" element={<Contacts/>}/>
     </Routes>
   );
 };
