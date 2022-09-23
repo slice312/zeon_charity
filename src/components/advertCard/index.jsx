@@ -1,6 +1,6 @@
 import css from "./styles.module.scss";
 import {useTranslation} from "react-i18next";
-import {Link} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import _ from "lodash";
 
 import emptyImg from "src/assets/images/empty-card-image.png";
