@@ -1,65 +1,58 @@
-//import css from "./styles.module.scss"
-import './home.scss'
-import MainCarousel from "../../components/mainCarousel/mainCarousel.jsx"
-import batken1 from '../../assets/images/batken-1.jpg'
+import './home.scss';
+import batken1 from '../../assets/images/batken-1.jpg';
 import FadeInSection from "../../components/fade/Fade";
 import CategoryCard from "../../components/categoryCard/CategoryCard.jsx";
-import image1 from '../../assets/images/children-help.jpeg'
-import image2 from '../../assets/images/old-help.jpg'
-import image3 from '../../assets/images/poor-help.jpg'
-import image4 from '../../assets/images/nature-help.jpg'
-import {useNavigate} from "react-router-dom";
+import image1 from '../../assets/images/children-help.jpeg';
+import image2 from '../../assets/images/old-help.jpg';
+import image3 from '../../assets/images/poor-help.jpg';
+import image4 from '../../assets/images/nature-help.jpg';
+import {useTranslation} from "react-i18next";
 
 export const Home = () => {
+    const {t} = useTranslation();
+
     const categories = [
         {
-            title: 'Помощь детям',
-            description: 'Природу не поставишь “на паузу”. Природоохранная работа — это сложный, непрерывный и очень долгий процесс. Его нельзя останавливать, чтобы не “откатиться” на несколько десятилетий назад. Здоровая экосистема — это залог нашего существования, и сохранять природу жизненно важно для нас и будущих поколений.',
+            title: t("category.childTitle"),
+            description: t("category.childDesc"),
             image: image1,
             link: '/'
         },
         {
-            title: 'Помощь пожилым',
-            description: 'Природу не поставишь “на паузу”. Природоохранная работа — это сложный, непрерывный и очень долгий процесс. Его нельзя останавливать, чтобы не “откатиться” на несколько десятилетий назад. Здоровая экосистема — это залог нашего существования, и сохранять природу жизненно важно для нас и будущих поколений.',
+            title: t("category.elderlyTitle"),
+            description: t("category.elderlyDesc"),
             image: image2,
             link: '/'
         },
         {
-            title: 'Помощь нуждающимся',
-            description: 'Природу не поставишь “на паузу”. Природоохранная работа — это сложный, непрерывный и очень долгий процесс. Его нельзя останавливать, чтобы не “откатиться” на несколько десятилетий назад. Здоровая экосистема — это залог нашего существования, и сохранять природу жизненно важно для нас и будущих поколений.',
+            title: t("category.destituteTitle"),
+            description: t("category.destituteDesc"),
             image: image3,
             link: '/'
         },
         {
-            title: 'Помощь природе',
-            description: 'Природу не поставишь “на паузу”. Природоохранная работа — это сложный, непрерывный и очень долгий процесс. Его нельзя останавливать, чтобы не “откатиться” на несколько десятилетий назад. Здоровая экосистема — это залог нашего существования, и сохранять природу жизненно важно для нас и будущих поколений.',
+            title: t("category.natureTitle"),
+            description: t("category.natureDesc"),
             image: image4,
             link: '/'
         }
-    ]
-
-    const navigate = useNavigate()
-
     return (
-        // <div className={css.carousel__container}>
-        //     <MainCarousel/>
-        // </div>
         <div className={'home'}>
             <div className="container">
                 <section className={'help-banner'}>
                     <div className="banner-text">
                         <FadeInSection>
                             <h1>
-                                Помощь Баткену
+                                {t("batkenHelp")}
                             </h1>
                             <p>
-                                Объявлен сбор средств для оказания помощи Баткену
+                                {t("batkenHelpDesc")}
                             </p>
                             <button onClick={() => navigate('/batken')}>
                                 Смотреть
                             </button>
                             <button>
-                                <a href={'tel: +996995123130'}>Мне нужна помощь</a>
+                                {t("doHelp")}
                             </button>
                         </FadeInSection>
                     </div>
@@ -67,7 +60,7 @@ export const Home = () => {
                 </section>
                 <section className={'categories-section'}>
                     <h1>
-                        Наши проекты
+                        {t("ourProjects")}
                     </h1>
                     <div className={'categories-content'}>
                         {categories.map((item, index) =>
@@ -79,5 +72,5 @@ export const Home = () => {
                 </section>
             </div>
         </div>
-    )
-}
+    );
+};

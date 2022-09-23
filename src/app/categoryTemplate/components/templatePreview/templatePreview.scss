@@ -89,8 +89,19 @@
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .template-preview {
+    &__title {
+      font-size: 45px;
+    }
+  }
+}
+
 @media screen and (max-width: 992px) {
   .template-preview {
+    &__title {
+      text-align: center;
+    }
     &__head {
       flex-direction: column;
       align-items: flex-start;
@@ -102,7 +113,7 @@
 @media screen and (max-width: 576px) {
   .template-preview {
     &__title {
-      font-size: 48px;
+      font-size: 30px;
     }
 
     &__buttons {
@@ -121,3 +132,11 @@
     }
   }
 }
+
+@media screen and (max-width: 376px) {
+    .template-preview {
+        &__title {
+            font-size: 25px;
+        }
+    }
+  }

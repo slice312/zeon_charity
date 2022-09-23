@@ -1,0 +1,61 @@
+@import "../../../../shared/styles/vars";
+
+.contacts-form {
+  text-align: left;
+  width: 100%;
+  display: grid;
+  align-items: center;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 28px;
+  grid-row-gap: 28px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+
+  &__wrapper {
+    max-width: 652px;
+    min-height: 620px;
+    margin-bottom: 0;
+    padding: 72px 48px;
+    border-style: none;
+    border-radius: 16px;
+    box-shadow: 0 8px 28px 0 rgb(43 43 43 / 6%);
+    display: grid;
+    grid-column-gap: 32px;
+    grid-row-gap: 32px;
+  }
+
+  &__submit-btn {
+    padding: 26px 38px;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: $btn-color2;
+    transition: background-color 300ms ease, transform 300ms ease, color 300ms ease, -webkit-transform 300ms ease;
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.111em;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    transform-style: preserve-3d;
+
+    &:hover {
+      background-color: #015379;
+    }
+  }
+}
+
+.message__textarea {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+@media screen and (max-width: 576px) {
+  .contacts-form {
+    display: flex;
+    flex-direction: column;
+
+    &__wrapper {
+      padding: 10px;
+    }
+  }
+}
