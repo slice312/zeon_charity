@@ -19,6 +19,17 @@ const Header = () => {
     setIsSidebarOpened(prev => !prev)
   }
 
+  useEffect(() => {
+    if (isSidebarOpened)
+      document.body.style.overflow = "hidden";
+    else
+      document.body.style.overflow = "auto";
+
+
+  }, [isSidebarOpened]);
+
+
+
   return (
     <header className="header">
       <div className="container">

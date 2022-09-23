@@ -9,7 +9,6 @@ export const commonApi = createApi({
     endpoints: (build) => ({
         getCategories: build.query({
             query: () => {
-                debugger
                 return "category/"
             },
             providesTags: result => ["Categories"]
@@ -17,7 +16,6 @@ export const commonApi = createApi({
 
         getCities: build.query({
             query: () => {
-                debugger
                 return "cities/"
             },
             providesTags: result => ["Cities"]

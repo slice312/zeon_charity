@@ -2,22 +2,16 @@ import React, {useState, forwardRef} from "react";
 import cn from "classnames";
 import css from "./styles.module.scss";
 
-import {ReactComponent as UnvisibleIcon} from "@/assets/icons/eye-no.svg";
+import {ReactComponent as UnvisibleIcon} from "src/assets/icons/eye-no.svg";
 
 
-interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
-    error?: string | boolean;
-    isPassword?: boolean;
-    mask?: RegExp;
-}
 
-
-export const Input = forwardRef((props: Props, ref: React.Ref<HTMLInputElement>) => {
+export const Input = forwardRef((props, ref) => {
     const {error, isPassword, className, ...restProps} = props;
     const {...formsProps} = restProps;
 
     const [isShowValue, setIsShowValue] = useState(!isPassword);
-    const [text, setText] = useState(props.value as string);
+    const [text, setText] = useState(props.value);
 
     let type = props.type;
     if (isPassword)
@@ -34,18 +28,17 @@ export const Input = forwardRef((props: Props, ref: React.Ref<HTMLInputElement>)
                     ref={ref}
                     type={type}
                     placeholder={props.placeholder}
-                    onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => {
+                    onKeyDown={(e) => {
                         if (e.key === "Backspace" || e.key === "Enter" || e.shiftKey || e.altKey
                             || e.ctrlKey || e.metaKey || e.key === "ArrowLeft" || e.key === "ArrowRight")
                             return;
                         if (props.mask) {
                             if (!props.mask.test(text + e.key)) {
                                 e.preventDefault();
-                                return;
                             }
                         }
                     }}
-                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                    onChange={(e) => {
                         setText(e.target.value);
                         formsProps.onChange?.(e);
                     }}

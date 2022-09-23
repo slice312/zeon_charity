@@ -1,5 +1,5 @@
-import previewFirstImage from "../../../../assets/images/template-preview_1.jpeg";
-import previewSecontImage from "../../../../assets/images/template-preview_2.jpeg";
+import previewFirstImage from "../../../../assets/images/children-help.jpeg"
+import previewSecontImage from "../../../../assets/images/chlidren2.jpeg"
 import './templatePreview.scss'
 
 
@@ -8,7 +8,6 @@ const TemplatePreview = () => {
     <section className="template-preview">
       <div className="container">
 
-        <div className="template-preview__line"/>
         <div className="template-preview__head">
           <h2 className="template-preview__title">
             The mission behind our charity foundation
