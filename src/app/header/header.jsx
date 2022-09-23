@@ -53,7 +53,21 @@ const Header = () => {
               <div className={"header__burger-item header__burger-item--bottom " +
               (isSidebarOpened ? " header__burger-item--bottom--js-active" : "")}/>
             </button>
-            <button type={"button"} className="header__buttons-item header__buttons-item--give-help">
+            <button type={"button"} className="header__buttons-item header__buttons-item--give-help"  onClick={async () => {
+                const r =await fetch(`${import.meta.env.VITE_WEB_API_URL}/transaction/`, {
+                  method:"POST",
+                  headers: {
+                    'Content-Type': "application/json"
+                  },
+                  body: JSON.stringify( {
+                    amount: "55",
+                    description: "donate"
+                  })
+                });
+
+                const d = await r.json();
+                window.open(d.url)
+            }}>
               {
                 t('donate')
               }
