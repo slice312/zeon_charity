@@ -33,10 +33,10 @@ export const Home = () => {
             link: '/nature/4'
         },
         {
-            title: t("category.batken"),
+            title: t("deti"),
             description: t("category.batkenDesc"),
-            image: "https://sputnik.kg/img/07e6/09/15/1068126940_0:240:1280:960_1920x0_80_0_0_e44389f2d81b4f6bc8d34e6f05756db2.jpg.webp",
-            link: '/batken/5'
+            image: "https://emosurff.com/i/0003Kx0drOyD/2.jpg",
+            link: '/children/5'
         },
     ];
     return (

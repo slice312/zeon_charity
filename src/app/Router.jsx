@@ -61,6 +61,7 @@ export const Router = () => {
       <Route path="/nature/:id" element={<AnimalsCategoriesPage data={data[2]}/>}/>
       <Route path="/batken/:id" element={<Batken/>}/>
       <Route path="/contacts/:id" element={<Contacts/>}/>
+      <Route path="/children/:id" element={<CategoryTemplate/>}/>
     </Routes>
   );
 };
