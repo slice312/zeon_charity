@@ -12,7 +12,7 @@ const Batken = () => {
 
     const params = useParams()
 
-    const {data: adverts} = advertApi.useGetAdvertsQuery({categoryId: params.id});
+    const {data: adverts} = advertApi.useGetAdvertsQuery({categoryId: undefined});
 
     const need = [
         {

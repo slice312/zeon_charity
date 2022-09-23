@@ -22,7 +22,7 @@ export const AdvertCard = ({advert}) => {
     return (
         <div className={css.root}>
             <div className={css.imgWrap}>
-                <img src={advert.images?.[0] || emptyImg} alt="img"/>
+                <img src={advert.article_images?.[0]?.image || emptyImg} alt="img"/>
             </div>
             <div className={css.cityLabel}>
                 <span>
