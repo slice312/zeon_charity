@@ -13,16 +13,18 @@ const AdvertProfile = () => {
     const params = useParams();
     const [advert, setAdvert] = useState(null);
 
+
     useEffect(() => {
-        (async () => {
-            try {
-                const response =  await fetch(`${import.meta.env.VITE_WEB_API_URL}/donation/${params.id}`)
-
-            } catch (e) {
-
-            }
-        })();
-    })
+        // (async () => {
+        //     try {
+        //         const response =  await fetch(`${import.meta.env.VITE_WEB_API_URL}/donation/${params.id}`)
+        //
+        //     } catch (e) {
+        //
+        //     }
+        // })();
+        window.scrollTo(0, 0)
+    }, [])
 
     const slides = [
         {
@@ -95,6 +97,7 @@ const AdvertProfile = () => {
                             </div>
                         </div>
                 </div>
+                <div style={{padding: 20}}><CountdownTimer endDate={"24.09.2022"}/></div>
                 <div className={'advert-description'}>
                     <h2>
                         Описание

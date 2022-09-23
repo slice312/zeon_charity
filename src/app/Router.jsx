@@ -60,6 +60,8 @@ export const Router = () => {
       <Route path="/elderly/:id" element={<AnimalsCategoriesPage data={data[1]}/>}/>
       <Route path="/nature/:id" element={<AnimalsCategoriesPage data={data[2]}/>}/>
       <Route path="/batken/:id" element={<Batken/>}/>
+      <Route path="/contacts/:id" element={<Contacts/>}/>
+      <Route path="/children/:id" element={<CategoryTemplate/>}/>
       <Route path="/contacts" element={<Contacts/>}/>
     </Routes>
   );
