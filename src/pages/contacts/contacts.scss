@@ -1,0 +1,37 @@
+.contacts {
+  padding-top: 120px;
+
+  &__preview-text-content {
+    margin-bottom: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__subtitle {
+    font-size: 20px;
+    line-height: 1.1em;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  &__title {
+    margin-top: 0px;
+    margin-bottom: 16px;
+    font-family: Bespokeserif, sans-serif;
+    color: #090909;
+    font-size: 54px;
+    line-height: 1.333em;
+    font-weight: 700;
+  }
+
+  &__text {
+    max-width: 616px;
+    color: #6e6e6e;
+    font-size: 18px;
+    line-height: 1.667em;
+  }
+}

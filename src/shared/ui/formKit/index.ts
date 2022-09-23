@@ -1,7 +1,7 @@
 import {Checkbox} from "./checkbox";
-import {Input} from "./input";
-import {PhoneInput} from "./phoneInput";
-import {TextArea} from "./textArea";
+import {Input} from "../input";
+import {PhoneInput} from "../phoneInput";
+import {TextArea} from "../textArea";
 import {DropDown} from "../dropDown";
 
 

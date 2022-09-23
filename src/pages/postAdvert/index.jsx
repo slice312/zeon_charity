@@ -5,6 +5,8 @@ import {useFormik} from "formik";
 import {useState} from "react";
 import css from "./styles.module.scss"
 import {commonApi} from "src/store/commonApi.js";
+import {Input} from "../../shared/ui/input/index.jsx";
+import {TextArea} from "../../shared/ui/textArea";
 
 
 const categories = [
@@ -32,7 +34,20 @@ export const PostAdvert = () => {
 
     const formik = useFormik({
         enableReinitialize: false,
-        initialValues: initValues,
+        initialValues: {
+            categoryId: -1,
+            city: -1,
+            title: "",
+            description: "",
+            progress: 0,
+            charityQty: 0,
+            owner: "",
+            phone_number: "",
+            creation_date: "",
+            end_date: "",
+            requisites: "",
+            is_active: false,
+        },
         validationSchema: validationSchema,
         validateOnBlur: false,
         validateOnChange: isValidateOnChange,
@@ -55,7 +70,42 @@ export const PostAdvert = () => {
                         onSelectedItem={x => formik.setFieldValue("categoryId", x?.id)}
                         ItemComponent={CategoryItem}
                     />
-                    PsotAdver
+
+                    <Input
+                        className={css.input}
+                        id="product-name"
+                        placeholder="Название"
+                        {...formik.getFieldProps("title")}
+                        error={formik.errors.title}
+                    />
+                    <TextArea
+                        id="product-name"
+                        className={cn(css.textarea, css.input)}
+                        placeholder="Описание"
+                        {...formik.getFieldProps("description")}
+                        error={formik.errors.description}
+                    />
+                    <Input
+                        className={css.input}
+                        id="product-name"
+                        placeholder="Название"
+                        {...formik.getFieldProps("phone_number")}
+                        error={formik.errors.phone_number}
+                    />
+                    <Input
+                        className={css.input}
+                        id="product-name"
+                        placeholder="Название"
+                        {...formik.getFieldProps("end_date")}
+                        error={formik.errors.end_date}
+                    />
+                    <Input
+                        className={css.input}
+                        id="product-name"
+                        placeholder="Название"
+                        {...formik.getFieldProps("requisites")}
+                        error={formik.errors.requisites}
+                    />
                 </form>
             </div>
         </div>

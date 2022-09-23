@@ -3,16 +3,7 @@ import cn from "classnames";
 import css from "./styles.module.scss";
 
 
-interface Props extends React.InputHTMLAttributes<HTMLTextAreaElement> {
-    error?: string | boolean;
-    options?: {
-        maxLength?: number;
-        showCharCounter?: boolean;
-    };
-}
-
-
-export const TextArea = forwardRef((props: Props, ref: React.Ref<HTMLTextAreaElement>) => {
+export const TextArea = forwardRef((props, ref) => {
     const {options, error, className, id, ...restProps} = props;
     const [restCharQty, setRestCharQty] = useState(options?.maxLength);
     const isError = Boolean(error);

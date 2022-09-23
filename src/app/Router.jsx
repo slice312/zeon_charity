@@ -6,6 +6,8 @@ import AdvertProfile from "../pages/advertProfile/AdvertProfile.jsx";
 import {PayboxTest} from "../pages/payboxTest";
 import CategoryTemplate from "./categoryTemplate/categoryTemplate";
 import AnimalsCategoriesPage from "../pages/categoriesPage/animals/AnimalsCategoriesPage.jsx";
+import Batken from "../pages/batkenPage/Batken.jsx";
+import Contacts from "../pages/contacts/contacts";
 
 export const Router = () => {
     const data = [
@@ -57,6 +59,8 @@ export const Router = () => {
       <Route path="/animals" element={<AnimalsCategoriesPage data={data[0]}/>}/>
       <Route path="/elderly" element={<AnimalsCategoriesPage data={data[1]}/>}/>
       <Route path="/nature" element={<AnimalsCategoriesPage data={data[2]}/>}/>
+      <Route path="/batken" element={<Batken/>}/>
+      <Route path="/contacts" element={<Contacts/>}/>
     </Routes>
   );
 };
