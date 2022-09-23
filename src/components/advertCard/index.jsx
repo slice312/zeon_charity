@@ -51,7 +51,7 @@ export const AdvertCard = ({advert}) => {
 
                     </div>
                 </div>
-                <Link to={`/advert/${advert.id}`} className={css.btnHelp}>
+                <Link to={`/advert-profile/${advert.id}`} className={css.btnHelp}>
                     {t("doHelp")}
                 </Link>
             </div>

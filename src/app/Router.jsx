@@ -53,7 +53,7 @@ export const Router = () => {
       <Route path="/" element={<Home/>}/>
       <Route path="/adverts/:id" element={<AdvertsPage/>}/>
       <Route path="/post-advert" element={<PostAdvert/>}/>
-      <Route path="/advert-profile" element={<AdvertProfile/>}/>
+      <Route path="/advert-profile/:id" element={<AdvertProfile/>}/>
       <Route path="/paybox" element={<PayboxTest/>}/>
       <Route path="/fund" element={<CategoryTemplate/>}/>
       <Route path="/animals" element={<AnimalsCategoriesPage data={data[0]}/>}/>
